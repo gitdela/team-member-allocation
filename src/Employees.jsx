@@ -3,6 +3,7 @@ import femaleProfile from './images/femaleProfile.jpg';
 import maleProfile from './images/maleProfile.jpg';
 
 const Employees = () => {
+  const [selectedTeam, setTeam] = useState('TeamB');
   const [employees, setEmployees] = useState([
     {
       id: 1,
@@ -90,14 +91,50 @@ const Employees = () => {
     },
   ]);
 
+  function handleTeamChange(event) {
+    setTeam(event.target.value);
+    console.log(event.target.value);
+  }
+
+  function handleEmployeeCardClick(event) {
+    const transformedEmployees = employees.map((employee) =>
+      employee.id === parseInt(event.currentTarget.id)
+        ? employee.teamName === selectedTeam
+          ? { ...employee, teamName: '' }
+          : { ...employee, teamName: selectedTeam }
+        : employee
+    );
+
+    setEmployees(transformedEmployees);
+  }
+
   return (
     <main className='container'>
+      <div className='row justify-content-center mt-3 mb-3'>
+        <div className='col-6 text-center'>
+          <select
+            className='form-select form-select-lg'
+            value={selectedTeam}
+            onChange={handleTeamChange}
+          >
+            <option value='TeamA'>Team A</option>
+            <option value='TeamB'>Team B</option>
+            <option value='TeamC'>Team C</option>
+            <option value='TeamD'>Team D</option>
+          </select>
+        </div>
+      </div>
       <div className='row justify-content-center mt-3 mb-3'>
         <div className='col-9 card-collection'>
           {/* <div className='card-collection'> */}
           {employees.map(({ id, fullName, designation, gender, teamName }) => (
             // when you map in react, it must return just a single element so put everything inside a single div
-            <div id={id} className='card m-2'>
+            <div
+              id={id}
+              className='card m-2'
+              style={{ cursor: 'pointer' }}
+              onClick={handleEmployeeCardClick}
+            >
               <img
                 src={gender === 'male' ? maleProfile : femaleProfile}
                 className='card-img-top'
