@@ -47,10 +47,6 @@ const Employees = ({
                   <b>Designation: </b>
                   {designation}
                 </p>
-                <p className='card-text'>
-                  <b>Gender: </b>
-                  {gender}
-                </p>
               </div>
             </div>
           ))}
