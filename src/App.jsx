@@ -3,7 +3,7 @@ import './App.css';
 import Employees from './Employees';
 import Footer from './Footer';
 import Header from './Header';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [selectedTeam, setTeam] = useState('TeamA');
@@ -93,6 +93,14 @@ function App() {
       teamName: 'TeamD',
     },
   ]);
+
+  useEffect(() => {
+    localStorage.setItem('employeeList', JSON.stringify(employees));
+  }, [employees]);
+
+  useEffect(() => {
+    localStorage.setItem('selectedTeam', JSON.stringify(selectedTeam));
+  }, [selectedTeam]);
 
   function handleTeamChange(event) {
     setTeam(event.target.value);
