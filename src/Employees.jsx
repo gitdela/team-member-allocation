@@ -29,6 +29,7 @@ const Employees = ({
           {employees.map(({ id, fullName, designation, gender, teamName }) => (
             // when you map in react, it must return just a single element so put everything inside a single div
             <div
+              key={id}
               id={id}
               className={`card m-2 ${
                 teamName === selectedTeam ? 'standout' : ''
