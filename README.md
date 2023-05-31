@@ -1,6 +1,6 @@
 # Team Member Allocation App
 
-This is a web application built with React and Bootstrap that allows you to manage team members and their allocation to different teams. It provides a user-friendly interface to view and update team assignments for individual employees.
+This is a web application built with React and Bootstrap that allows you to manage team members and their allocation to different teams. It provides a user-friendly interface to view and update team assignments for individual employees. You can access it at https://gitdela.github.io/team-member-allocation
 
 ## Features
 
