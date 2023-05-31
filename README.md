@@ -2,6 +2,8 @@
 
 This is a web application built with React and Bootstrap that allows you to manage team members and their allocation to different teams. It provides a user-friendly interface to view and update team assignments for individual employees. You can access it at https://gitdela.github.io/team-member-allocation
 
+This project is primarily to learn about React Hooks like useState and useEffect so I have not made it responsive on mobile yet. Best user experience will be on a desktop.
+
 ## Features
 
 - View a list of employees with their names, designations, and profile pictures.
