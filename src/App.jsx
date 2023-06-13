@@ -6,7 +6,7 @@ import GroupedTeamMembers from './GroupedTeamMembers';
 import Footer from './Footer';
 import Header from './Header';
 import { useState, useEffect } from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound';
 
 function App() {
