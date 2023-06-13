@@ -6,15 +6,12 @@ const Nav = () => {
     <nav className='navbar navbar-expand-lg navbar-light bg-light'>
       <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
         <li className='nav-item'>
-          <Link className='nav-link' to='/team-member-allocation/'>
+          <Link className='nav-link' to='/'>
             Home
           </Link>
         </li>
         <li className='nav-item'>
-          <Link
-            className='nav-link'
-            to='/team-member-allocation/GroupedTeamMembers'
-          >
+          <Link className='nav-link' to='/GroupedTeamMembers'>
             Teams
           </Link>
         </li>
