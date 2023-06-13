@@ -6,7 +6,7 @@ import GroupedTeamMembers from './GroupedTeamMembers';
 import Footer from './Footer';
 import Header from './Header';
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import NotFound from './NotFound';
 
 function App() {
@@ -131,7 +131,7 @@ function App() {
 
   return (
     <div>
-      <Router>
+      <HashRouter>
         <Nav />
         <Header
           selectedTeam={selectedTeam}
@@ -166,7 +166,7 @@ function App() {
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
         <Footer />
-      </Router>
+      </HashRouter>
     </div>
   );
 }
